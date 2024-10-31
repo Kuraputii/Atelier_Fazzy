@@ -1,90 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Fazzy</title>
+    <meta name="description" content="text text text">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/sanitize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        var titles = ["Atelier Fazzy", "アトリエ ふぁじ～", "Welcome!!", "ようこそ！！"]; // タイトルのパターンを設定します
+        var index = 0;
+    
+        function changeTitle() {
+            document.title = titles[index]; // タイトルを設定します
+            index = (index + 1) % titles.length; // 次のタイトルにインデックスを更新します
+        }
+
+        setInterval(changeTitle, 1500); // 1秒ごとにタイトルを変更します
+
+        //モーダルを表示させるためのJS
+        document.addEventListener('DOMContentLoaded', () => {
+            const showModalButton = document.getElementById('show-modal');
+            const modal = document.getElementById('modal');
+            const closeModalButton = document.getElementById('close-modal');
+
+            showModalButton.addEventListener('click', () => {
+                modal.style.display = 'flex';
+            });
+            closeModalButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        })
+    </script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
+
+    <!--ハローワールドの動画-->
+
+    <div class="hero">
+        <strong>Hello World!</strong>
+        <div class="hero-particles" id="particles-js"></div>
+        <video autoplay loop muted preload>
+            <source src="assets/videos/Hero.mp4" type="video/mp4">
+        </video>
     </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+
+    <!--ヘッダー-->
+
+    <header class="header">
+        <h1 class="header-logo">
+            <a href="#" title="Atelier Fazzy">
+                <img src="./assets/images/home.png" width="70" height="80" alt="Home">
+            </a>
+        </h1>
+        <nav class="header-nav">
+            <ul class="header-navlist">
+                <li class="header-navitem">
+                    <a href="#Profile">Profile</a>
+                </li>
+                <li class="header-navitem">
+                    <a href="#Productions">Productions</a>
+                </li>
+                <li class="header-navitem">
+                    <a href="#News">News</a>
+                </li>
+                <li class="header-navitem">
+                    <a href="#States">States</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--1つ目-->
+
+    <section id="Profile" class="section">
+        <h1 class="section-headline">プロフィール</h1>
+        <figure class="about">
+            <img class="about-image" src="https://dummyimage.com/600x400/000/fff" alt="About Image">
+            <figcaption class="about-caption">
+                <h2 class="about-headline">クラプチって誰？</h2>
+                <p class="about-description">
+                    Author: クラプチ<br />
+                    記事制作当時は学生<br />
+                    趣味はアドオン制作、ゲーム制作<br />
+                    けものが大好きな変態です
+                </p>
+            </figcaption>
+        </figure>
+    </section>
+
+    <!--2つ目-->
+
+    <section id="#Productions" class="section">
+        <h1 class="section-headline">制作物一覧</h1>
+    </section>
+
+    <!--3つ目-->
+
+    <section id="News" class="section">
+        <h1 class="section-headline">最新ニュース</h1>
+
+        <ul class="grid grid-col-3">
+            <li class="grid-item">
+                <article class="card">
+                    <a href="#" class="card-link" id="show-modal">
+                        <span class="card-label">New</span>
+                        <img class="card-image" src="https://dummyimage.com/200x100/000/fff" width="100" height="100" alt="thumnail">
+                        <div class="card-info">
+                            <time class="card-time" datetime="2024-03-21">2024.03.21</time>
+                            <h1 class="card-headline">次期制作モブ投票結果発表！</h1>
+                            <p class="card-description">↑クリックしてサイトに移動する↑</p>
+                        </div>
+                        <dl class="avator">
+                            <dt class="avator-name">Kuraputi</dt>
+                            <dd class="avator-image">
+                                <img src="./assets/images/kuraputi_icon.jpg" width="40" height="40" alt="avator">
+                            </dd>
+                        </dl>
+                    </a>
+                </article>
+            </li>
+            <li class="grid-item">
+                <article class="card">
+                    <a href="#" class="card-link">
+                        <img class="card-image" src="./assets/images/Amaryllis.png" width="1000" height="1000" alt="thumnail">
+                        <div class="card-info">
+                            <time class="card-time" datetime="2024-03-21">2024.03.21</time>
+                            <h1 class="card-headline">Amarullis V2.0制作決定!！</h1>
+                            <p class="card-description">↑クリックしてサイトに移動する↑
+                            </p>
+                        </div>
+                        <dl class="avator">
+                            <dt class="avator-name">Kuraputi</dt>
+                            <dd class="avator-image">
+                                <img src="./assets/images/kuraputi_icon.jpg" width="40" height="40" alt="avator">
+                            </dd>
+                        </dl>
+                    </a>
+                </article>
+            </li>
+            <li class="grid-item">
+                <article class="card">
+                    <a href="#" class="card-link">
+                        <img class="card-image" src="./assets/images/YCS.png" width="40" height="40" alt="thumnail">
+                        <div class="card-info">
+
+                            <time class="card-time" datetime="2024-03-21">2024.03.21</time>
+                            <h1 class="card-headline">YCS Basic版 V2.0配布決定!！</h1>
+                            <p class="card-description">↑クリックしてサイトに移動する↑
+                            </p>
+                        </div>
+                        <dl class="avator">
+                            <dt class="avator-name">Kuraputi</dt>
+                            <dd class="avator-image">
+                                <img src="./assets/images/kuraputi_icon.jpg" width="40" height="40" alt="avator">
+                            </dd>
+                        </dl>
+                    </a>
+                </article>
+            </li>
+        </ul>
+
+        <div class="section-button">
+            <a href="#" class="button">
+                Blog Page
+            </a>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
+    </section>
+
+    <!--4つ目-->
+
+    <section id="States" class="section section-secondary">
+        <h1 class="section-headline"></h1>
+
+        <ul class="grid grid-col-4">
+            <li class="grid-item">
+                <a href="https://discord.com" target="_blank">
+                    <dl class="feature">
+                        <dt class="feautre-headline">Discord</dt>
+                        <dd class="feature-img">
+                            <img src="./assets/images/discord.png" width="100" height="100" alt="Discord">
+                        </dd>
+                        <dd class="feature-description">Here.</dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="grid-item">
+                <a href="https://twitter.com/kuraputi_ch9" target="_blank">
+                    <dl class="feature">
+                        <dt class="feautre-headline">X(Twitter)</dt>
+                        <dd class="feature-img">
+                            <img src="./assets/images/twitter.png" width="100" height="100" alt="Twitter">
+                        </dd>
+                        <dd class="feature-description">@kuraputi_ch9
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="grid-item">
+                <a href="https://mcpedl.com/user/kuraputi/" target="_blank">
+                    <dl class="feature">
+                        <dt class="feautre-headline">MCPEDL</dt>
+                        <dd class="feature-img">
+                            <img src="./assets/images/mcpedl.png" width="100" height="100" alt="MCPEDL">
+                        </dd>
+                        <dd class="feature-description">クラプチ
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+            <li class="grid-item">
+                <a href="https://www.youtube.com/channel/UC-mWhesUUEVexzr5KWeJJbA" target="_blank">
+                    <dl class="feature">
+                        <dt class="feautre-headline">Youtube</dt>
+                        <dd class="feature-img">
+                            <img src="./assets/images/youtube.png" width="100" height="100" alt="Youtube">
+                        </dd>
+                        <dd class="feature-description">@Kuraputi
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!--フッター-->
+
+    <footer class="footer">
+        <hr class="footer-line" />
+        <small class="footer-copy">Copyright©Atelier Fazzy</small>
+    </footer>
+
+    <!--モーダルの中身-->
+    <div id="modal" class="modal">
+        <p>まだ記事が作成されていないよ！</p>
+        <button id="close-modal">閉じる</button>
     </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+
+    <!--最終処理-->
+
+    <script src="./assets/js/particles.min.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
+
 </html>

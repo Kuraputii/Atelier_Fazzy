@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Fazzy - ツール紹介</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1><a href="index.html" class="header-link">Atelier Fazzy</a></h1>
+            <p>技術と便利ツールの工房へようこそ</p>
+            <div class="header-icon">
+                <a href="javascript:void(0)" onclick="openMenu()"><img src="Images/Menu.png" alt="メニューアイコン" class="header-icon-img"></a>
+            </div>
+        </div>
+    </header>
+    <div id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">ホーム</a>
+        <a href="tools.html">ツール</a>
+        <a href="addons.html">アドオン</a>
+        <a href="games.html">ゲーム</a>
+    </div>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+    <main>
+        <img src="Images/Top.png" alt="トップ画像" id="top-image">
+        <div class="button-container">
+            <button class="nav-button" onclick="location.href='index.html'">ホーム</button>
+            <button class="nav-button" onclick="location.href='tools.html'">ツール</button>
+            <button class="nav-button" onclick="location.href='addons.html'">アドオン</button>
+            <button class="nav-button" onclick="location.href='games.html'">ゲーム</button>
+        </div>
+        <div class="description-container">
+            <p>こちらはツール紹介のページです。便利なツールをここで紹介します。</p>
+        </div>
+        <div class="tool-container">
+            <a href="#" class="tool-tab" onclick="return false;">
+                <img src="Images/ToolIcons/UniCoder.png" alt="Tool 1" class="tool-icon">
+                <div class="tool-info">
+                    <h3>KRPT-UniCoder</h3>
+                    <p>jsonファイルを独自の暗号に変換します。</p><br>
+                    <p class="status non-public">非公開 | ●Private</p>
+                </div>
+            </a>
+            <a href="#" class="tool-tab" onclick="return false;">
+                <img src="Images/ToolIcons/R2QSwaper.png" alt="Tool 2" class="tool-icon">
+                <div class="tool-info">
+                    <h3>KRPT-R2QSwaper</h3>
+                    <p>run_commandとqueue_commandを入れ替えます。</p>
+                    <p class="status incomplete">未完成 | ●Unfinished/WIP</p>
+                </div>
+            </a>
+            <a href="#" class="tool-tab" onclick="return false;">
+                <img src="Images/ToolIcons/Unfinished.png" alt="Tool 3" class="tool-icon">
+                <div class="tool-info">
+                    <h3>こうご期待！</h3>
+                    <p>---</p><br><br>
+                    <p class="status incomplete">未完成 | ●Unfinished/WIP</p>
+                </div>
+            </a>
+            <a href="#" class="tool-tab" onclick="return false;">
+                <img src="Images/ToolIcons/Unfinished.png" alt="Tool 4" class="tool-icon">
+                <div class="tool-info">
+                    <h3>こうご期待！</h3>
+                    <p>---</p><br><br>
+                    <p class="status incomplete">未完成 | ●Unfinished/WIP</p>
+                </div>
+            </a>
+            <a href="#" class="tool-tab" onclick="return false;">
+                <img src="Images/ToolIcons/Unfinished.png" alt="Tool 5" class="tool-icon">
+                <div class="tool-info">
+                    <h3>こうご期待！</h3>
+                    <p>---</p><br><br>
+                    <p class="status incomplete">未完成 | ●Unfinished/WIP</p>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://x.com/kuraputi_ch9" target="_blank"><img src="Images/X.png" alt="X" class="footer-icon"></a>
+                <a href="https://youtube.com/@kuraputi?si=DxTPnFTKyA07md-X" target="_blank"><img src="Images/Youtube.png" alt="YouTube" class="footer-icon"></a>
+                <a href="https://mcpedl.com/user/kuraputi/" target="_blank"><img src="Images/Mcpedl.png" alt="MCPEDL" class="footer-icon"></a>
+                <a href="javascript:void(0)" onclick="copyURL('https://www.reddit.com')"><img src="Images/Share.png" alt="Share" class="footer-icon"></a>
+            </div>
+            <div class="footer-text">
+                <span>&copy; 2024 Atelier Fazzy</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

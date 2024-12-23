@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Fazzy - ゲーム紹介</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1><a href="index.html" class="header-link">Atelier Fazzy</a></h1>
+            <p>技術と便利ツールの工房へようこそ</p>
+            <div class="header-icon">
+                <a href="javascript:void(0)" onclick="openMenu()"><img src="Images/Menu.png" alt="メニューアイコン" class="header-icon-img"></a>
+            </div>
+        </div>
+    </header>
+    <div id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">ホーム</a>
+        <a href="tools.html">ツール</a>
+        <a href="addons.html">アドオン</a>
+        <a href="games.html">ゲーム</a>
+    </div>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+    <main>
+        <img src="Images/Top.png" alt="トップ画像" id="top-image">
+        <div class="button-container">
+            <button class="nav-button" onclick="location.href='index.html'">ホーム</button>
+            <button class="nav-button" onclick="location.href='tools.html'">ツール</button>
+            <button class="nav-button" onclick="location.href='addons.html'">アドオン</button>
+            <button class="nav-button" onclick="location.href='games.html'">ゲーム</button>
+        </div>
+        <div class="description-container">
+            <p>こちらはゲーム紹介のページです。これまで作ったゲームの紹介します。</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://x.com/kuraputi_ch9" target="_blank"><img src="Images/X.png" alt="X" class="footer-icon"></a>
+                <a href="https://youtube.com/@kuraputi?si=DxTPnFTKyA07md-X" target="_blank"><img src="Images/Youtube.png" alt="YouTube" class="footer-icon"></a>
+                <a href="https://mcpedl.com/user/kuraputi/" target="_blank"><img src="Images/Mcpedl.png" alt="MCPEDL" class="footer-icon"></a>
+                <a href="javascript:void(0)" onclick="copyURL('https://www.reddit.com')"><img src="Images/Share.png" alt="Share" class="footer-icon"></a>
+            </div>
+            <div class="footer-text">
+                <span>&copy; 2024 Atelier Fazzy</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

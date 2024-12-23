@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Fazzy - アドオン紹介</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1><a href="index.html" class="header-link">Atelier Fazzy</a></h1>
+            <p>技術と便利ツールの工房へようこそ</p>
+            <div class="header-icon">
+                <a href="javascript:void(0)" onclick="openMenu()"><img src="Images/Menu.png" alt="メニューアイコン" class="header-icon-img"></a>
+            </div>
+        </div>
+    </header>
+    <div id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">ホーム</a>
+        <a href="tools.html">ツール</a>
+        <a href="addons.html">アドオン</a>
+        <a href="games.html">ゲーム</a>
+    </div>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+    <main>
+        <img src="Images/Top.png" alt="トップ画像" id="top-image">
+        <div class="button-container">
+            <button class="nav-button" onclick="location.href='index.html'">ホーム</button>
+            <button class="nav-button" onclick="location.href='tools.html'">ツール</button>
+            <button class="nav-button" onclick="location.href='addons.html'">アドオン</button>
+            <button class="nav-button" onclick="location.href='games.html'">ゲーム</button>
+        </div>
+        <div class="description-container">
+            <p>こちらはアドオン紹介のページです。作成したアドオンをここで紹介します。</p>
+        </div>
+        <div class="addon-section">
+            <div class="section-title">
+                <h2>人気のアドオン</h2>
+            </div>
+            <div class="addon-container">
+                <a href="https://mcpedl.com/scarlet-barrage-v2/" class="addon-tab">
+                    <img src="Images/AddonIcons/ScarletBarrage.png" alt="ScarletBarrage" class="addon-icon">
+                    <div class="addon-info">
+                        <h3>|!¡! Scarlet Barrage !¡!|</h3>
+                        <p>分類：Flashiness</p>
+                        <p>人気度：★★★★☆(4.7)</p><br><br>
+                        <p class="status public">●公開 | ●Public</p>
+                    </div>
+                </a>
+                <a href="https://mcpedl.com/ycs/" class="addon-tab">
+                    <img src="Images/AddonIcons/YCS.png" alt="YCS" class="addon-icon">
+                    <div class="addon-info">
+                        <h3>- Yellow Calmness Shining -</h3>
+                        <p>分類：Inflation</p>
+                        <p>人気度：★★★★☆(4.4)</p><br>
+                        <p class="status public">●公開 | ●Public</p>
+                    </div>
+                </a>
+                <a href="https://mcpedl.com/magical-broomstick-addon/" class="addon-tab">
+                    <img src="Images/AddonIcons/MagicalBroomstick.png" alt="MagicalBroomstick" class="addon-icon">
+                    <div class="addon-info">
+                        <h3>Magical BroomStick Addon!</h3>
+                        <p>分類：Normal</p>
+                        <p>人気度：★★★★☆(4.3)</p><br>
+                        <p class="status public">●公開 | ●Public</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="addon-section number-container-wrapper">
+            <div class="section-title">
+                <h2>アドオン図鑑</h2>
+            </div>
+            <div class="labels-container">
+                <p class="label">アイコン</p>
+                <p class="label">名前</p>
+                <p class="label">ティア
+                    <button class="help-button" onclick="openHelp()">?</button>
+                </p>
+                <p class="label">シリーズ</p>
+                <p class="label">一言</p>
+                <p class="label">公開リンク</p>
+            </div>
+            <div id="help-popup" class="help-popup">
+                <div class="help-content">
+                    <span class="close-button" onclick="closeHelp()">&times;</span>
+                    <h2>ティアの詳細</h2>
+                    <p>Tier1:　　　弱-Weak</p>
+                    <p>Tier2:　　　並-Average</p>
+                    <p>Tier3:　　　強-Strong</p>
+                    <p>Tier4:　　　凶-Evil</p>
+                    <p>Tier5:　　　狂-Mad</p>
+                    <p>Tier6:　　　虚-Void</p>
+                    <p>Tier7:　　　準神-Near.God</p>
+                    <p>Tier8:　　　神-God</p>
+                    <p>Tier9:　　　Postman</p>
+                    <p>Tier10:　　 Courier</p>
+                    <p>Tier11:　　 Null</p>
+                    <p>Tier12:　　 Supernull</p>
+                    <p>Tier13:　　 Hypernull</p>
+                    <p>Tier14:　　 Overforge</p>
+                    <p>Tier15:　　 ???</p>
+                </div>
+            </div>
+
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/YCCve.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Yellow Calmness Cat【Very Easy】</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text yellow">凶-Evil</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Yellow Calmness Shining</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">力の源は感情なり<br><br>...あれはさながら『暴走』せしものよ</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/f21fjzp9fwaqkz2/YCS%25E3%2580%2590Very_Easy%25E3%2580%2591Edition_V2.mcaddon/file-1" class="number-link" download>1.21.0~</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/YCCe.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Yellow Calmness Cat【Easy】</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text yellow">虚-Void</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Yellow Calmness Shining</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">人も神も等しく如何なる強者も<br><br>終焉を逃げ得ず...<br><br>冷然たる心でその刻を迎えるばかりよ</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/l3pptbjos9dpbn1/YCS%25E3%2580%2590Easy%25E3%2580%2591Edition_V3.mcaddon/file" class="number-link">1.21.0~</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/YCCh.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Yellow Calmness Cat【Hard】</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text yellow">神-God</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Yellow Calmness Shining</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">感情を超越し冷徹なる心で力を呼び覚ます<br><br>...その静けさに力は深く宿る</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/dsdr2qzg51lvujx/YCS%25E3%2580%2590Hard%25E3%2580%2591Edition_V4.mcaddon/file" class="number-link">1.20.81~1.21.2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/YCCvh.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Yellow Calmness Cat【Very Hard】</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text yellow">Postman</span> ~ Null</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Yellow Calmness Shining</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment"><span class="animated-wave-text">あの日おきた■■　　　　　　　　　　　　　　　　　■■■■も■■■も既に...　　　　　　　　　　　　　　　■■■■■であった</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/7y4loekwq40zn62/YCS%25E3%2580%2590Very_Hard%25E3%2580%2591Edition_V4.mcaddon/file" class="number-link">1.20.81~1.21.2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/YCW.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Yellow Calmness Witherzilla</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text yellow">準神-Near.God</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Yellow Calmness Shining</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">YCCが生み出した感情を具現化した存在<br><br>敬い、従うものとして存在している</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/tuco2aatznqdjmt/YCS%25E3%2580%2590Witherzilla%25E3%2580%2591Edition_V3.mcaddon/file" class="number-link">1.20.81~1.21.2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/Amaryllis.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Amaryllis</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text red">凶-Evil</span> ~ <span class="colored-text purple">神-God</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">|!¡! Scarlet Barrage !¡!|</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment animated-text-container">
+                        緋色の破壊主義者<br><br>
+                        <span class="animated-text">S̵̭͍͎͖҇͋͒͢ó̷̢̬̝̥̯͛̇͠ṁ̸̢͈̗̳̥̬̀͝e̷̖̫̤͑̒̾̋̕̚͢b̶̢͉͙̳̩̖̐͛͠o̵̢͈̭͊͋̔̿̕ͅd̸̛̲̞̰̈́͋̚͢y̶͓͎̆͒̔̿͜͡ h̶̛̭̫̫̽̌̌͢ę̵̬̮̓̈̐͠l̷̡̲̩̰͖̃̏͛̃̕p҈̢̱̣̣̞̭̊̀̔͊̽̕ m̴̢͔͉̰͆̽͋̉͠e̴̢̙̪̓́̋̈́̕̚!̵͓̗͖҇̽̂̇͢ͅ!҉̢̗͓͇͓̂̾̄̒̊̕!̸̠͈̊̀̄̚͜͞!҈̨͓̙̙̫͐́͗͞!̸̖̤̊̆̕͜</span>
+                    </p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p>
+                        <a href="https://www.mediafire.com/file/y2l5m7ncaa07iiw/Amaryllis_V2.0_1.20.81%257E1.21.2%25E7%2589%2588.mcaddon/file" class="number-link">1.20.81~1.21.2</a>
+                        <a href="https://www.mediafire.com/file/gjmkeay9py7ai2i/Amaryllis_V2.0_1.21.20%257E1.21.23%25E7%2589%2588.mcaddon/file" class="number-link">1.21.20~1.21.23</a>
+                        <a href="https://www.mediafire.com/file/meomhyo8mnz2i2k/Amaryllis_V2.0_1.21.301%257E%25E7%2589%2588.mcaddon/file" class="number-link">1.21.301~???</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/CF.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">CF-Amaryllis(Old)</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text purple">凶-Evil</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">Amaryllisの実の弟に当たる獣人<br><br>彼の瞳は暗く、過去の凄惨さを物語っている</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://www.mediafire.com/file/pt0dwx47fy1azrs/CF-Amaryllis_V1.mcaddon/file" class="number-link">1.21.0~</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/kuraputi.jpg" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Clematis(New)</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text pink">強-Strong</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">CF-Amaryllisのリメイク版<br><br>悪魔を解放するのはいつだって<br><br>『愛の力』なのかもしれない...</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text purple">●破損 | ●Broken</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/AmaryllislvE.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Amaryllis Level: E</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier gaming-text">Overforge</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">|!¡! Scarlet Barrage !¡!|</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment"><span class="shaky-text">これは"ゲーム"なんかではない<br><br>凶悪な力に耐えられず既に壊れてしまった<br><br>これでよかったのかもしれない...</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text purple">●破損 | ●Broken</span></p><br>
+                        <a href="https://youtu.be/N7-0f1JapZw?si=7y5CMuC4jLAhBiaL" class="number-link">Showcase</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/ada.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Ada</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text ns">弱-Weak</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Magical Broomstick Addon!</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">魔法世界を放浪する行商"犬"<br><br>おてんばでかわいげがあるが、どこか裏が...</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開 | ●Public</span></p><br>
+                        <a href="https://mcpedl.com/magical-broomstick-addon/" class="number-link">MCPEDL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/Alnam.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Alnam</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text ns">強-Strong</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Project [Thermal-Commet]</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">"惑星サルヴィネ"からきた<br><br>大型の機械生命体</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text purple">●破損 | ●Broken</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/tbba.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">The Big Bang Alnam</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text red">狂-Mad</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Project [Thermal-Commet]</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">爆発を中心とした攻撃を繰り出す<br><br>威力は圧倒的だが...<br><br>本人曰く"お遊び"らしい</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text red">●非公開 | ●Private</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/kuraputi.jpg" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Kuraputi-Neo</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text blue">準神-Near.God</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Kuraputi Creator</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">世界の原点に顕現せし幻影<br><br>触れられず、感じられず<br><br>世界は浄化される...</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text red">●非公開 | ●Private</span></p><br>
+                        <a href="https://b23.tv/gTL09bh" class="number-link">Showcase</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/kuraputi.jpg" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Kuraputi-Extra</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text red">Postman</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">Kuraputi Creator</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">[編集済み]</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text gray">●未完成 | ●Unfinished/WIP</span></p><br>
+                        <a href="https://b23.tv/JMfo8ww" class="number-link">Showcase</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/IS.gif" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">-Imaginary Singularity-</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier gaming-text">Courier</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment"><span class="binary-animation">01001101 01111001 00100000 01100011 01101000 01101001 01101100 01100100 01110010 01100101 01101110</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text red">●非公開 | ●Private</span></p><br>
+                        <a href="https://youtu.be/o1zcZIVv0CM?si=OCeULD70Tm7e5mQO" class="number-link">Showcase</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/Elixia.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Elixia</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text sky">Hypernull</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">ねぇねぇみんなみてるかしら?<br><br>ここのブログってなかなかユーモアあるよね<br><br>ワタシ気に入っちゃったo((*•ω•))o♪</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text red">●非公開 | ●Private</span></p><br>
+                        <a href="https://youtu.be/kT42p8dLN7Y?si=hVQ2pWhRH-bzNjbu" class="number-link">Showcase</a>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/eta.gif" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">η</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier">虚-Void</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">[システムに異常を検知]<br><br>[自動削除プログラム: 実行済み]<br><br>進捗：0%</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text gray">●未完成 | ●Unfinished/WIP</span></p><br>
+                        <p class="number-comment"><span class="colored-text red">●非公開 | ●Private</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="number-container">
+                <div class="number-item-box icon-box">
+                    <img src="Images/MobIcons/Barlen-Inf-.png" alt="アイコン" class="number-icon">
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-name">Barlen-亡鏡ノ化神-</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-tier"><span class="colored-text red">Courier</span></p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-series">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <p class="number-comment">---</p>
+                </div>
+                <div class="number-item-box text-box">
+                    <div class="number-link-box">
+                        <p class="number-comment"><span class="colored-text green">●公開(ベータ版) | ●Public(Beta Version)</span></p><br>
+                        <a href="https://www.mediafire.com/file/0o37li5wz4fh5zd/Barlen-%25E4%25BA%25A1%25E9%258F%25A1%25E3%2583%258E%25E5%258C%2596%25E7%25A5%259E-_V1.0-%25CE%25B2_1.20.81%257E1.21.2%25E7%2589%2588.mcaddon/file" class="number-link">1.21.0~1.21.2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://x.com/kuraputi_ch9" target="_blank"><img src="Images/X.png" alt="X" class="footer-icon"></a>
+                <a href="https://youtube.com/@kuraputi?si=DxTPnFTKyA07md-X" target="_blank"><img src="Images/Youtube.png" alt="YouTube" class="footer-icon"></a>
+                <a href="https://mcpedl.com/user/kuraputi/" target="_blank"><img src="Images/Mcpedl.png" alt="MCPEDL" class="footer-icon"></a>
+                <a href="javascript:void(0)" onclick="copyURL('https://www.reddit.com')"><img src="Images/Share.png" alt="Share" class="footer-icon"></a>
+            </div>
+            <div class="footer-text">
+                <span>&copy; 2024 Atelier Fazzy</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

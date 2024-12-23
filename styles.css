@@ -1,0 +1,669 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* 薄い灰色 */
+    min-height: 100vh; /* 背景を縦に大きく */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ヘッダーのスタイル */
+.site-header {
+    background-color: #404040; /* 濃いネズミ色 */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s; /* スクロール時のトランジション効果 */
+    z-index: 1000;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 32px; /* フォントサイズを大きく */
+}
+
+.header-content p {
+    margin: 5px 0 20px; /* 余白を追加 */
+    font-size: 14px;
+}
+
+.header-content .header-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.header-icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}
+
+/* トップ画像のスタイル */
+#top-image {
+    display: block;
+    margin: 0 auto 20px; /* 中央寄せと下に空間 */
+    max-width: 100%;
+    height: auto;
+    padding-top: 120px; /* 固定ヘッダー分のパディング */
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: white; /* 白色のハイライト */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+    max-width: 90%; /* 最大横幅を90%に設定 */
+    margin: 20px auto; /* 中央寄せと上下に余白追加 */
+    width: 100%; /* 横サイズをフルに設定 */
+}
+
+.nav-button {
+    background-color: transparent; /* 背景色なし */
+    color: black;
+    border: none; /* 枠なし */
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex: 1; /* ボタンの幅を均等に設定 */
+}
+
+.nav-button:hover {
+    background-color: #eee;
+}
+
+@media (min-width: 769px) {
+    .nav-button {
+        flex: 1; /* PC比率でのサイズ調整 */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-button {
+        width: calc(50% - 10px); /* 2列に配置 */
+        padding: 5px 10px; /* 縦のサイズを小さく */
+        font-size: 14px; /* 文字サイズも小さく */
+    }
+}
+
+/* 説明コンテナのスタイル */
+.description-container {
+    background-color: white; /* 白色の背景 */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%; /* 最大横幅を90%に設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+    border-radius: 5px;
+    text-align: center; /* 文字を中央寄せ */
+}
+
+.description-container p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #404040; /* 濃いネズミ色 */
+    padding: 60px 0; /* 縦にさらに大きく */
+    text-align: center;
+    color: white;
+    margin-top: auto; /* フッターを一番下に固定 */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* スペースを狭める */
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px; /* アイコン間のスペースを広げる */
+}
+
+.footer-icon {
+    width: 60px; /* アイコンのサイズを大きく */
+    height: 60px;
+}
+
+.footer-text {
+    font-size: 14px; /* 文字サイズを小さく */
+    margin-top: 20px; /* 文字をさらに下に下げる */
+}
+
+/* サイドメニューのスタイル */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    background-color: #404040;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px; /* バツボタンを左上に配置 */
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none; /* デフォルトでは非表示 */
+}
+
+/* アドオンセクションのスタイル */
+.addon-section {
+    margin: 20px auto;
+    max-width: 90%; /* 横幅を紹介文の白枠と同じに設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* セクションタイトルのスタイル */
+.section-title h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* アドオンタブのスタイル */
+.addon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; /* 余白を追加 */
+}
+
+.addon-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 30px; /* 縦の余白を追加 */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 250px; /* 横長に設定 */
+    height: 320px; /* 少し大きめに設定 */
+    text-decoration: none; /* リンクの装飾を除去 */
+    color: inherit; /* リンクの色を継承 */
+    transition: transform 0.3s; /* タブのサイズ変更のアニメーション */
+    margin: 10px 0; /* 上下に余白を追加 */
+}
+
+.addon-tab:hover {
+    transform: scale(1.05);
+}
+
+.addon-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.addon-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.addon-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.addon-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.new-badge {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 2px 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* 非公開ステータスの色 */
+.status.non-public {
+    color: #ff0000;
+}
+
+/* 公開ステータスの色 */
+.status.public {
+    color: rgb(0, 211, 0);
+}
+
+/* 未完成ステータスの色 */
+.status.incomplete {
+    color: #858585;
+}
+
+/* グローバルリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ラベルコンテナのスタイル */
+.labels-container {
+    display: flex;
+    justify-content: space-between; /* ラベル間のスペースを均等に */
+    margin: 20px auto;
+    max-width: 90%; /* 横幅を紹介文と同じに設定 */
+    gap: 20px; /* 全体の間隔を広く設定 */
+}
+
+/* ラベルのスタイル */
+.label {
+    font-weight: bold;
+    margin-bottom: 10px; /* 下部に余白を追加 */
+    text-align: center;
+    flex: 1; /* ラベルの幅を均等に設定 */
+}
+
+/* 特定のラベルの間隔調整 */
+.labels-container .label:nth-child(1) {
+    flex: 0.5;
+    margin-right: 40px;
+}
+
+.labels-container .label:nth-child(2) {
+    flex: 1;
+    margin-right: 85px;
+}
+
+.labels-container .label:nth-child(3) {
+    flex: 1.3;
+    margin-right: 40px;
+}
+
+.labels-container .label:nth-child(4) {
+    flex: 1.3;
+}
+
+.labels-container .label:nth-child(5) {
+    flex: 1.7;
+    margin-left: 15px;
+}
+
+.labels-container .label:nth-child(6) {
+    flex: 1.5;
+}
+
+/* 数字コンテナのスタイル */
+.number-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 70px;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+/* 数字アイテムボックスのスタイル */
+.number-item-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #d3d3d3;
+    background-color: #f9f9f9;
+    margin: 0 -1px;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+/* アイコンボックスのスタイル */
+.icon-box {
+    flex: 3;
+}
+
+/* テキストボックスのスタイル */
+.text-box {
+    flex: 8;
+}
+
+/* アイコンのスタイル */
+.number-icon {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+/* 名前のスタイル */
+.number-name,
+.number-tier,
+.number-series,
+.number-comment,
+.number-link {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* 公開リンクボックスのスタイル */
+.number-link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 左寄せ */
+    gap: 0;
+    text-align: left; /* テキストを左寄せ */
+    width: 100%; /* ボックス全体の幅を使用 */
+}
+
+/* 公開リンクのスタイル */
+.number-link {
+    color: #0000ee;
+    text-decoration: none; /* 下線を削除 */
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* テキストを左寄せ */
+    width: 100%; /* リンク全体の幅を使用 */
+}
+
+/* アドオン図鑑全体の白枠の下部に余白を追加 */
+.addon-section.number-container-wrapper {
+    padding-bottom: 30px; /* 30pxの余白を追加 */
+}
+
+/* アニメーションテキストコンテナのスタイル */
+.animated-text-container {
+    text-align: center;
+}
+
+/* アニメーションテキストのスタイル */
+.animated-text {
+    font-size: 14px;
+    color: #333;
+}
+
+/* ウェーブアニメーションのスタイル */
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+    
+/* アニメーションテキストのスタイル */
+.animated-wave-text span {
+    display: inline-block;
+    animation: wave 1s ease-in-out infinite;
+}
+
+.animated-wave-text span:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.animated-wave-text span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+/* フェードイン・フェードアウトと上下移動のアニメーション */
+@keyframes fadeInOutMove {
+    0%, 100% { 
+        opacity: 0; 
+        transform: translateY(0); /* 元の位置 */
+    }
+    50% { 
+        opacity: 1; 
+        transform: translateY(-5px); /* 上に微かに移動 */
+    }
+}
+
+/* アニメーションテキストのスタイル */
+.binary-animation span {
+    display: inline-block;
+    animation: fadeInOutMove 3s infinite;
+    animation-delay: calc(var(--index) * 0.2s);
+}
+
+/* 文字の震えアニメーション */
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-1px, 1px); }
+    20% { transform: translate(-2px, -2px); }
+    30% { transform: translate(2px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(-2px, -2px); }
+    70% { transform: translate(2px, 2px); }
+    80% { transform: translate(1px, -1px); }
+    90% { transform: translate(-1px, 1px); }
+}
+
+/* アニメーションテキストのスタイル */
+.shaky-text span {
+    display: inline-block;
+    animation: shake 0.5s infinite;
+}
+
+/* ツールコンテナのスタイル */
+.tool-container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%; /* 横幅を紹介文と同じに設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* タブ間のスペースを追加 */
+}
+
+/* ツールタブのスタイル */
+.tool-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 20px; /* 縦の余白を調整 */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 250px; /* 横長に設定 */
+    height: 350px; /* 縦長に設定 */
+    text-decoration: none; /* リンクの装飾を除去 */
+    color: inherit; /* リンクの色を継承 */
+    transition: transform 0.3s; /* タブのサイズ変更のアニメーション */
+    margin: 10px; /* 上下に余白を追加 */
+}
+
+/* ツールタブのホバー効果 */
+.tool-tab:hover {
+    transform: scale(1.05);
+}
+
+/* ツールアイコンのスタイル */
+.tool-icon {
+    width: 200px;
+    height: auto; /* 高さを自動調整 */
+    margin-bottom: 10px; /* 下部に余白を追加 */
+    align-self: flex-start; /* 上に引き上げる */
+}
+
+/* ツール情報のスタイル */
+.tool-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 上に引き上げる */
+    height: 100%;
+    gap: 8px;
+}
+
+.tool-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tool-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ゲーミングカラーのアニメーション */
+@keyframes gaming-rainbow {
+    0% { color: #ff0000; }
+    16% { color: #ff7f00; }
+    32% { color: #ffff00; }
+    48% { color: #00ff00; }
+    64% { color: #0000ff; }
+    80% { color: #4b0082; }
+    100% { color: #9400d3; }
+}
+
+.gaming-text {
+    animation: gaming-rainbow 1s infinite;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: rgb(0, 211, 0);
+}
+
+.yellow {
+    color: rgb(255, 187, 0);
+}
+
+.gray {
+    color: gray;
+}
+
+.purple {
+    color: purple;
+}
+
+.sky {
+    color: skyblue;
+}
+
+.pink {
+    color: pink;
+}
+
+.ns {
+    color:rgb(30, 142, 187);
+}
+
+/* ヘルプボタンのスタイル */
+.help-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* ヘルプポップアップのスタイル */
+.help-popup {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    z-index: 1000; /* 最前面に表示 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* 半透明の背景 */
+}
+
+.help-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; /* 最大幅を設定 */
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
